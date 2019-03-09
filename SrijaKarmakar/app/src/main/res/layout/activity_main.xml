@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#"
+    android:background="#00aba1"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,12 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="#86cac9 "
-        android:layout_marginTop="60dp"
+        android:id="@+id/result_text_view"
+        android:layout_marginTop="80dp"
         android:text="PARTY WINS!"
         android:textSize="40dp" />
 
     <LinearLayout
-        android:id="@+id/partywin"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -27,19 +28,23 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="40dp"
+            android:textColor="#ffffff"
+            android:id="@+id/party_a_vote"
+            android:layout_marginTop="60dp"
             android:layout_weight="1"
 
-            android:text="party 2"
+            android:text="Party A"
             android:textSize="30dp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="60dp"
             android:gravity="center"
+            android:id="@+id/party_b_vote"
             android:layout_weight="1"
-            android:text="party 3"
+            android:text="Party B"
             android:textSize="30dp" />
 
 
@@ -56,7 +61,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="party 2"
             android:layout_marginTop="20dp"
             android:textSize="30dp" />
 
@@ -66,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="party 3"
+
             android:textSize="30dp" />
 
 
@@ -82,8 +86,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_margin="40dp"
-            te
+            android:text="A"
             android:layout_weight="1"
+            android:background="#00caa9"
+            android:onClick="voteForA"
             android:gravity="center"
             android:textSize="30dp" />
 
@@ -93,6 +99,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
             android:layout_weight="1"
+            android:onClick="voteForB"
+            android:background="#00caa9"
+            android:text="B"
             android:gravity="center"
             android:textSize="30dp" />
 
@@ -107,8 +116,10 @@
             android:layout_width="match_parent"
             android:text="None of the above"
             android:layout_margin="40dp"
+            android:onClick="voteForNone"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:background="#00caa9"
             />
     </LinearLayout>
 </LinearLayout>
