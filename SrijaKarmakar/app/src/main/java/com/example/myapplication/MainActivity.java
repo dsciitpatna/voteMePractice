@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     TextView voteA;
     TextView voteB;
 
-
+    //declaring global variables to count votes
     int votesOfA=0;
     int votesOfB=0;
     int totalVotes=0;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         voteA.setText(String.valueOf(votesOfA)+"/"+String.valueOf(totalVotes));
         voteB.setText(String.valueOf(votesOfB)+"/"+String.valueOf(totalVotes));
         Toast.makeText(this, "you have voted for B", Toast.LENGTH_SHORT).show();
-        displayVotes()  ;
+        displayVotes();
 
     }
 
